@@ -1,0 +1,74 @@
+:root {
+  --font-caps: "Alegreya SC", serif;
+  --font-normal: "STIX Two Text", serif;
+}
+
+.article-form {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-normal);
+}
+
+#article-header-form-container {
+  margin-top: 2rem;
+}
+#article-header-form {
+  width: 100%;
+  height: 4rem;
+  text-align: center;
+  font-family: var(--font-normal);
+  font-size: 2.5vw;
+  font-weight: bold;
+}
+
+.summernote-container {
+  margin-top: 2rem;
+}
+#article-image-link-container {
+  margin-top: 2rem;
+}
+#article-image-link {
+  width: 100%;
+  height: 3rem;
+  padding-inline: 10px;
+}
+
+#add-news-button {
+  width: 20rem;
+  height: 4rem;
+  margin-bottom: 5rem;
+  border-radius: 1rem;
+  align-self: center;
+  font-weight: bolder;
+}
+
+.done-status {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.438);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.done-status > div {
+  width: max-content;
+  height: 50%;
+  width: 50%;
+  background: white;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.done-status img {
+  max-width: 50%;
+  max-height: 50%;
+}

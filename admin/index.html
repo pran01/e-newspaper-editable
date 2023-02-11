@@ -18,6 +18,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+        <script src="../scripts/addedContent.js"></script>
     </head>
 
     <body>
@@ -49,30 +50,8 @@
             </div>
             <button onclick="addNews()" id="add-news-button">Add News</button>
         </article>
-        <script>
-            $("#summernote").summernote({
-                toolbar: [
-                    ['font', ['bold', 'underline', 'italic']],
-                ],
-                placeholder: 'Add Your News Content',
-                height: 200,
-            });
-            function addNews() {
-                let summernote = document.getElementById("summernote");
-                let articleHeader = document.querySelector("#article-header-form");
-                let articleImageLink = document.querySelector("#article-image-link");
-                let authorName = document.querySelector("#article-author-name");
-                localStorage.setItem("body", summernote.value);
-                localStorage.setItem("header", articleHeader.value);
-                articleImageLink.value && localStorage.setItem("image", articleImageLink.value);
-                localStorage.setItem("author", authorName.value);
+        <script src="../scripts/adminScript.js">
 
-                summernote.value = "";
-                articleHeader.value = "";
-                articleImageLink.value = "";
-                authorName.value = "";
-                document.querySelector(".done-status").style.display = "flex";
-            }
         </script>
     </body>
 

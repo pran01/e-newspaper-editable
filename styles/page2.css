@@ -17,6 +17,13 @@ body {
   width: 0px;
 }
 
+.page {
+  display: none;
+}
+.page.current {
+  display: block;
+}
+
 .news-header {
   width: 100%;
   display: flex;

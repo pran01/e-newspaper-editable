@@ -16,3 +16,29 @@ function createArticle(article) {
             </article>
     `;
 }
+
+function pasteArticles(articleCollection) {
+  let articleString = "";
+  for (let article of articleCollection) {
+    articleString += createArticle(article);
+  }
+  return articleString;
+}
+
+function createPage(pageInfo, currentPage) {
+  return `
+    <section class="page ${
+      pageInfo.page === currentPage ? "current" : ""
+    }" id="page-${pageInfo.page}">
+    <header class="news-header">
+            <section class="metadata-header">
+                <span>Saturday, January 8, 2022 | JDNEWS.COM</span>
+                <span>Page: ${pageInfo.page}</span>
+            </section>
+        </header>
+        <section id="articles-group">
+            ${pasteArticles(pageInfo.content)}
+        </section>
+        <nav-element disabled-right prev-page="index.html"></nav-element>
+    `;
+}
